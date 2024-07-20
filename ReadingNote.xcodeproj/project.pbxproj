@@ -11,6 +11,8 @@
 		A00A0AC22C4BD9620020D708 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AC12C4BD9620020D708 /* ContentView.swift */; };
 		A00A0AC42C4BD9640020D708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00A0AC32C4BD9640020D708 /* Assets.xcassets */; };
 		A00A0AC72C4BD9640020D708 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00A0AC62C4BD9640020D708 /* Preview Assets.xcassets */; };
+		A00A0AD02C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A00A0ACE2C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld */; };
+		A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD22C4BDD810020D708 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		A00A0AC12C4BD9620020D708 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A00A0AC32C4BD9640020D708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A00A0AC62C4BD9640020D708 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A00A0ACF2C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReadingTimeDb.xcdatamodel; sourceTree = "<group>"; };
+		A00A0AD22C4BDD810020D708 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				A00A0ABF2C4BD9620020D708 /* ReadingNoteApp.swift */,
-				A00A0AC12C4BD9620020D708 /* ContentView.swift */,
+				A00A0AD12C4BDBC50020D708 /* DataGroup */,
+				A00A0ACD2C4BD97D0020D708 /* View */,
 				A00A0AC32C4BD9640020D708 /* Assets.xcassets */,
 				A00A0AC52C4BD9640020D708 /* Preview Content */,
 			);
@@ -65,6 +70,23 @@
 				A00A0AC62C4BD9640020D708 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A00A0ACD2C4BD97D0020D708 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A00A0AC12C4BD9620020D708 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A00A0AD12C4BDBC50020D708 /* DataGroup */ = {
+			isa = PBXGroup;
+			children = (
+				A00A0ACE2C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld */,
+				A00A0AD22C4BDD810020D708 /* DataController.swift */,
+			);
+			path = DataGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00A0AC22C4BD9620020D708 /* ContentView.swift in Sources */,
+				A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */,
 				A00A0AC02C4BD9620020D708 /* ReadingNoteApp.swift in Sources */,
+				A00A0AD02C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +366,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A00A0ACE2C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A00A0ACF2C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodel */,
+			);
+			currentVersion = A00A0ACF2C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodel */;
+			path = ReadingTimeDb.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A00A0AB42C4BD9620020D708 /* Project object */;
 }
