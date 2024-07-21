@@ -14,5 +14,32 @@ class DataController: ObservableObject {
         }
     }
     
+    func save(context: NSManagedObjectContext) {
+        do {
+            try context.save()
+            print("Data saved")
+        } catch {
+            print("saving failed")
+        }
+    }
+    
+    func addNote(name: String, readingTime: Int64, context: NSManagedObjectContext) {
+        let book = Book(context: context)
+        book.name = name
+        book.readingTime = readingTime
+        book.id = UUID()
+        book.readDate = Date()
+        
+        save(context: context)
+    }
+    
+    func editNote(book: Book, name: String, readingTime: Int64, context: NSManagedObjectContext) {
+        book.name = name
+        book.readingTime = readingTime
+        book.readDate = Date()
+        
+        save(context: context)
+    }
+    
     
 }
