@@ -13,6 +13,7 @@
 		A00A0AC72C4BD9640020D708 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00A0AC62C4BD9640020D708 /* Preview Assets.xcassets */; };
 		A00A0AD02C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A00A0ACE2C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld */; };
 		A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD22C4BDD810020D708 /* DataController.swift */; };
+		A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		A00A0AC62C4BD9640020D708 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A00A0ACF2C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReadingTimeDb.xcdatamodel; sourceTree = "<group>"; };
 		A00A0AD22C4BDD810020D708 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBooksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				A00A0AC12C4BD9620020D708 /* ContentView.swift */,
+				A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00A0AC22C4BD9620020D708 /* ContentView.swift in Sources */,
+				A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */,
 				A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */,
 				A00A0AC02C4BD9620020D708 /* ReadingNoteApp.swift in Sources */,
 				A00A0AD02C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld in Sources */,
