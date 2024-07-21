@@ -13,18 +13,18 @@ struct AddBooksView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
-    @State private var calories: Double = 0
+    @State private var readTime: Double = 0
     
     var body: some View {
         
         Form {
             Section(header: Text("Add Books")) {
                 
-                TextField("Add food here", text: $name)
+                TextField("Add new book", text: $name)
                 
                 VStack {
-                    Text("Calories: \(Int(calories))")
-                    Slider(value: $calories, in: 0...1000, step: 50)
+                    Text("reading Time: \(Int(readTime))")
+                    Slider(value: $readTime, in: 0...1000, step: 50)
                     Spacer()
                 }
                 .padding()

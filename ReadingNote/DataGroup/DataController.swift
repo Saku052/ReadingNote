@@ -23,7 +23,7 @@ class DataController: ObservableObject {
         }
     }
     
-    func addNote(name: String, readingTime: Int64, context: NSManagedObjectContext) {
+    func addNote(name: String, readingTime: Double, context: NSManagedObjectContext) {
         let book = Book(context: context)
         book.name = name
         book.readingTime = readingTime
@@ -33,7 +33,7 @@ class DataController: ObservableObject {
         save(context: context)
     }
     
-    func editNote(book: Book, name: String, readingTime: Int64, context: NSManagedObjectContext) {
+    func editNote(book: Book, name: String, readingTime: Double, context: NSManagedObjectContext) {
         book.name = name
         book.readingTime = readingTime
         book.readDate = Date()
