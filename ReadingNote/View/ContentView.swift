@@ -26,6 +26,21 @@ struct ContentView: View {
                     .foregroundStyle(.gray)
                     .padding(.horizontal)
                 
+                List {
+                    ForEach(books) { book in
+                        NavigationLink(destination: Text("\(book.readingTime)")) {
+                            HStack {
+                                VStack (alignment: .leading, spacing: 6){
+                                    Text("\(book.name!)")
+                                    Text("\(Int(book.readingTime)) kcal")
+                                }
+                                Spacer()
+                            }
+                        }
+                    }
+                }
+                .listStyle(.plain)
+                
             }
             .navigationTitle("Books")
             .toolbar {
@@ -33,7 +48,7 @@ struct ContentView: View {
                     Button {
                         showingAddView.toggle()
                     } label: {
-                        Label("Food", systemImage: "plus.circle")
+                        Label("Book", systemImage: "plus.circle")
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
