@@ -24,13 +24,18 @@ struct AddBooksView: View {
                 
                 VStack {
                     Text("reading Time: \(Int(readTime))")
-                    Slider(value: $readTime, in: 0...1000, step: 50)
+                    Slider(value: $readTime, in: 0...100, step: 1)
                     Spacer()
                 }
                 .padding()
                 
-                Button("Submit") {
-                    dismiss()
+                HStack {
+                    Spacer()
+                    Button("Submit") {
+                        DataController().addNote(name: name, readingTime: readTime, context: managedObjContext)
+                        dismiss()
+                    }
+                    Spacer()
                 }
             }
         }

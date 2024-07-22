@@ -22,7 +22,7 @@ struct ContentView: View {
         NavigationView {
             
             VStack(alignment: .leading) {
-                Text(" minutes of reading today")
+                Text("\(Int(totalReadingToday())) minutes of reading today")
                     .foregroundStyle(.gray)
                     .padding(.horizontal)
                 
@@ -32,7 +32,8 @@ struct ContentView: View {
                             HStack {
                                 VStack (alignment: .leading, spacing: 6){
                                     Text("\(book.name!)")
-                                    Text("\(Int(book.readingTime)) kcal")
+                                    Text("\(Int(book.readingTime)) minutes")
+                                        .bold()
                                 }
                                 Spacer()
                             }
@@ -55,10 +56,22 @@ struct ContentView: View {
                     EditButton()
                 }
             }
+            .sheet(isPresented: $showingAddView) {
+                AddBooksView()
+            }
         }
         .navigationViewStyle(.stack)
     }
     
+    func totalReadingToday() -> Double {
+        var readingToday: Double = 0
+        for item in books {
+            if Calendar.current.isDateInToday(item.readDate!) {
+                readingToday += item.readingTime
+            }
+        }
+        return readingToday
+    }
 }
 
 #Preview {
