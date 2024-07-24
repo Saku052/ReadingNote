@@ -14,6 +14,7 @@
 		A00A0AD02C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A00A0ACE2C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld */; };
 		A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD22C4BDD810020D708 /* DataController.swift */; };
 		A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */; };
+		A00A0AD92C4E26460020D708 /* EditBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD82C4E26460020D708 /* EditBooksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A00A0ACF2C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReadingTimeDb.xcdatamodel; sourceTree = "<group>"; };
 		A00A0AD22C4BDD810020D708 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBooksView.swift; sourceTree = "<group>"; };
+		A00A0AD82C4E26460020D708 /* EditBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBooksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				A00A0AC12C4BD9620020D708 /* ContentView.swift */,
 				A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */,
+				A00A0AD82C4E26460020D708 /* EditBooksView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */,
 				A00A0AC02C4BD9620020D708 /* ReadingNoteApp.swift in Sources */,
 				A00A0AD02C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld in Sources */,
+				A00A0AD92C4E26460020D708 /* EditBooksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

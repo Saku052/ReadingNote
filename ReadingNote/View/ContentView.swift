@@ -28,7 +28,7 @@ struct ContentView: View {
                 
                 List {
                     ForEach(books) { book in
-                        NavigationLink(destination: Text("\(book.readingTime)")) {
+                        NavigationLink(destination: EditBooksView(book: book)) {
                             HStack {
                                 VStack (alignment: .leading, spacing: 6){
                                     Text("\(book.name!)")
