@@ -13,7 +13,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(
         sortDescriptors: [SortDescriptor(\.readDate, order: .reverse)])
-        var books: FetchedResults<Book>
+    var books: FetchedResults<Book>
     
     @State private var showingAddView = false
     
@@ -28,7 +28,7 @@ struct ContentView: View {
                 
                 List {
                     ForEach(books) { book in
-                        NavigationLink(destination: Text("\(book.readingTime)")) {
+                        NavigationLink(destination: EditBooksView(book: book)) {
                             HStack {
                                 VStack (alignment: .leading, spacing: 6){
                                     Text("\(book.name!)")
@@ -39,6 +39,7 @@ struct ContentView: View {
                             }
                         }
                     }
+                    .onDelete(perform: deleteBooks)
                 }
                 .listStyle(.plain)
                 
@@ -71,6 +72,13 @@ struct ContentView: View {
             }
         }
         return readingToday
+    }
+    
+    func deleteBooks(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { books[$0] }.forEach(managedObjContext.delete)
+            DataController().save(context: managedObjContext)
+        }
     }
 }
 
