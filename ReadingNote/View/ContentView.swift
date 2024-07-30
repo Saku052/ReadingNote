@@ -36,6 +36,8 @@ struct ContentView: View {
                                         .bold()
                                 }
                                 Spacer()
+                                
+                                Text("\(book.readDate!)")
                             }
                         }
                     }
