@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0021F932C5CD678003F5720 /* BooksContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0021F922C5CD678003F5720 /* BooksContent.swift */; };
 		A00A0AC02C4BD9620020D708 /* ReadingNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0ABF2C4BD9620020D708 /* ReadingNoteApp.swift */; };
 		A00A0AC22C4BD9620020D708 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AC12C4BD9620020D708 /* ContentView.swift */; };
 		A00A0AC42C4BD9640020D708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00A0AC32C4BD9640020D708 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0021F922C5CD678003F5720 /* BooksContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksContent.swift; sourceTree = "<group>"; };
 		A00A0ABC2C4BD9620020D708 /* ReadingNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00A0ABF2C4BD9620020D708 /* ReadingNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingNoteApp.swift; sourceTree = "<group>"; };
 		A00A0AC12C4BD9620020D708 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				A00A0AC12C4BD9620020D708 /* ContentView.swift */,
 				A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */,
 				A00A0AD82C4E26460020D708 /* EditBooksView.swift */,
+				A0021F922C5CD678003F5720 /* BooksContent.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00A0AC22C4BD9620020D708 /* ContentView.swift in Sources */,
+				A0021F932C5CD678003F5720 /* BooksContent.swift in Sources */,
 				A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */,
 				A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */,
 				A00A0AC02C4BD9620020D708 /* ReadingNoteApp.swift in Sources */,

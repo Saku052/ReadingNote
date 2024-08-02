@@ -17,6 +17,7 @@ struct ContentView: View {
     
     @State private var showingAddView = false
     
+    
     var body: some View {
         
         NavigationView {
@@ -27,21 +28,7 @@ struct ContentView: View {
                     .padding(.horizontal)
                 
                 List {
-                    ForEach(books) { book in
-                        NavigationLink(destination: EditBooksView(book: book)) {
-                            HStack {
-                                VStack (alignment: .leading, spacing: 6){
-                                    Text("\(book.name!)")
-                                    Text("\(Int(book.readingTime)) minutes")
-                                        .bold()
-                                }
-                                Spacer()
-                                
-                                Text("\(book.readDate!)")
-                            }
-                        }
-                    }
-                    .onDelete(perform: deleteBooks)
+                    BooksContent(books: books)
                 }
                 .listStyle(.plain)
                 
@@ -76,12 +63,6 @@ struct ContentView: View {
         return readingToday
     }
     
-    func deleteBooks(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { books[$0] }.forEach(managedObjContext.delete)
-            DataController().save(context: managedObjContext)
-        }
-    }
 }
 
 #Preview {
