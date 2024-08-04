@@ -38,27 +38,5 @@ struct BooksContent: View {
         }
     }
     
-    func sumBooks(books: FetchedResults<Book>) -> [bookData]{
-        
-        var groupBooks: [bookData] = []
-        var dateNow: Date = Date()
-        
-        for book in books {
-            
-            if(dateNow == book.readDate) {
-            }
-            
-            dateNow = book.readDate!
-        }
-        
-        return groupBooks
-    }
-    
 }
 
-struct bookData {
-    
-    var name: String
-    var readDate: Date
-    var readingTime: Double
-}
