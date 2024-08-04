@@ -16,6 +16,8 @@ struct EditBooksView: View {
     
     @State private var name: String = ""
     @State private var readingTime: Double = 0
+    @State private var addTime: Double = 0
+    
     
     var body: some View {
         Form {
@@ -28,13 +30,21 @@ struct EditBooksView: View {
                     }
                 
                 VStack {
-                    Text("This is Todays reading Time: \(Int(readingTime))")
+                    Text("Edit todays reading time: \(Int(readingTime))")
                     Slider(value: $readingTime, in: 0...100, step: 1)
                     Spacer()
                 }
                 .padding()
                 
+                VStack {
+                    Text("Add reading time: \(Int(addTime))")
+                    Slider(value: $addTime, in: 0...100, step: 1)
+                    Spacer()
+                }
+                .padding()
+                
                 Button("Submit") {
+                    readingTime += addTime
                     DataController().editNote(book: book, name: name, readingTime: readingTime, context: managedObjContext)
                     dismiss()
                 }
