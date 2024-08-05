@@ -14,7 +14,7 @@ struct BooksContent: View {
     
     var body: some View {
         
-        NavigationLink (destination: ChartsView(books: books)) {
+        NavigationLink (destination: ChartsSummaryView(books: books)) {
             VStack (alignment: .leading) {
                 
                 Text("Check distribution")

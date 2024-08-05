@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-struct ChartsView: View {
+struct HistogramView: View {
     
     let books: FetchedResults<Book>
     
@@ -26,17 +26,17 @@ struct ChartsView: View {
     
     func getfrequency(data: [Double]) -> [FrequencyData] {
         
-        var freqData: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        var freqData: [Int] = [0, 0, 0, 0, 0, 0, 0, 0]
         var splitArray: [Int] = []
         let range: Double = data.max()! - data.min()!
-        let splitnum: Double = range / 10
+        let splitnum: Double = range / 8
         
-        for i in 0...9 {
+        for i in 0...7 {
             splitArray.append(Int(data.min()! + splitnum*Double(i)))
         }
         
         for item in data {
-            for i in 0...9 {
+            for i in 0...7 {
                 if (Int(item) < splitArray[i]) {
                     
                     freqData[i] += 1
