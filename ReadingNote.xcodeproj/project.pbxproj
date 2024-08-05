@@ -16,6 +16,7 @@
 		A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD22C4BDD810020D708 /* DataController.swift */; };
 		A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */; };
 		A00A0AD92C4E26460020D708 /* EditBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD82C4E26460020D708 /* EditBooksView.swift */; };
+		A092D5282C606C4B0030D9E7 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092D5272C606C4B0030D9E7 /* ChartsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A00A0AD22C4BDD810020D708 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBooksView.swift; sourceTree = "<group>"; };
 		A00A0AD82C4E26460020D708 /* EditBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBooksView.swift; sourceTree = "<group>"; };
+		A092D5272C606C4B0030D9E7 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */,
 				A00A0AD82C4E26460020D708 /* EditBooksView.swift */,
 				A0021F922C5CD678003F5720 /* BooksContent.swift */,
+				A092D5272C606C4B0030D9E7 /* ChartsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				A00A0AC22C4BD9620020D708 /* ContentView.swift in Sources */,
 				A0021F932C5CD678003F5720 /* BooksContent.swift in Sources */,
 				A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */,
+				A092D5282C606C4B0030D9E7 /* ChartsView.swift in Sources */,
 				A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */,
 				A00A0AC02C4BD9620020D708 /* ReadingNoteApp.swift in Sources */,
 				A00A0AD02C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld in Sources */,

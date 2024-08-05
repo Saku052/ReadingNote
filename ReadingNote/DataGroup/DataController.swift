@@ -36,7 +36,6 @@ class DataController: ObservableObject {
     func editNote(book: Book, name: String, readingTime: Double, context: NSManagedObjectContext) {
         book.name = name
         book.readingTime = readingTime
-        book.readDate = Date()
         
         save(context: context)
     }

@@ -25,6 +25,7 @@ struct BooksContent: View {
                     Spacer()
                     
                     Text("\(book.readDate!.formatted(date: .numeric, time: .omitted))")
+                        .foregroundStyle(getForegroundStyle(for: book.readDate!))
                 }
             }
         }
@@ -36,6 +37,17 @@ struct BooksContent: View {
             offsets.map { books[$0] }.forEach(managedObjContext.delete)
             DataController().save(context: managedObjContext)
         }
+    }
+    
+    func getForegroundStyle(for date: Date?) -> any ShapeStyle {
+        guard let date = date else {
+            return .primary
+        }
+        
+        let formattedReadDate = date.formatted(date: .numeric, time: .omitted)
+        let formattedCurrentDate = Date().formatted(date: .numeric, time: .omitted)
+        
+        return formattedReadDate != formattedCurrentDate ? .gray : .primary
     }
     
 }
