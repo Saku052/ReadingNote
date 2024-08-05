@@ -30,6 +30,10 @@ struct BooksContent: View {
             }
         }
         .onDelete(perform: deleteBooks)
+        
+        NavigationLink(destination: ChartsView(books: books)) {
+            Text("bar graph here")
+        }
     }
     
     func deleteBooks(offsets: IndexSet) {
@@ -51,4 +55,3 @@ struct BooksContent: View {
     }
     
 }
-
