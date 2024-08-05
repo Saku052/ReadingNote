@@ -14,10 +14,20 @@ struct BooksContent: View {
     
     var body: some View {
         
-        ForEach(books) { book in
+        NavigationLink (destination: ChartsView(books: books)) {
+            VStack (alignment: .leading) {
+                
+                Text("Check distribution")
+                Text("Average: 20 minutes")
+                    .bold()
+            }
+        }
+        
+        // List of past 8 books read
+        ForEach(books.prefix(8)) { book in
             NavigationLink(destination: EditBooksView(book: book)) {
                 HStack {
-                    VStack (alignment: .leading, spacing: 6){
+                    VStack (alignment: .leading, spacing: 6) {
                         Text("\(book.name!)")
                         Text("\(Int(book.readingTime)) minutes")
                             .bold()
@@ -28,12 +38,10 @@ struct BooksContent: View {
                         .foregroundStyle(getForegroundStyle(for: book.readDate!))
                 }
             }
+            
+            
         }
         .onDelete(perform: deleteBooks)
-        
-        NavigationLink(destination: ChartsView(books: books)) {
-            Text("bar graph here")
-        }
     }
     
     func deleteBooks(offsets: IndexSet) {
