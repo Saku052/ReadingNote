@@ -13,13 +13,22 @@ struct ChartsSummaryView: View {
     
     var body: some View {
         
-        VStack {
-            Text("This is my histogram")
-                .bold()
-            HistogramView(books: books)
-                .padding()
-                .frame(height: 200)
-            Spacer()
+        List {
+            VStack {
+                Text("reading time frequency")
+                    .bold()
+                HistogramView(books: books)
+                    .padding()
+                    .frame(height: 200)
+            }
+            
+            VStack {
+                Text("reading time trend")
+                    .bold()
+                TrendGraphView(books: books)
+                    .padding()
+                    .frame(height: 200)
+            }
         }
     }
 }

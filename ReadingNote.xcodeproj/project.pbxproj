@@ -16,6 +16,7 @@
 		A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD22C4BDD810020D708 /* DataController.swift */; };
 		A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */; };
 		A00A0AD92C4E26460020D708 /* EditBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD82C4E26460020D708 /* EditBooksView.swift */; };
+		A07BCA382C619DBA00AFCF02 /* TrendGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07BCA372C619DBA00AFCF02 /* TrendGraphView.swift */; };
 		A092D5282C606C4B0030D9E7 /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092D5272C606C4B0030D9E7 /* HistogramView.swift */; };
 		A092D52A2C60DAA30030D9E7 /* ChartsSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092D5292C60DAA30030D9E7 /* ChartsSummaryView.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		A00A0AD22C4BDD810020D708 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBooksView.swift; sourceTree = "<group>"; };
 		A00A0AD82C4E26460020D708 /* EditBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBooksView.swift; sourceTree = "<group>"; };
+		A07BCA372C619DBA00AFCF02 /* TrendGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendGraphView.swift; sourceTree = "<group>"; };
 		A092D5272C606C4B0030D9E7 /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
 		A092D5292C60DAA30030D9E7 /* ChartsSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsSummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 				A00A0AD82C4E26460020D708 /* EditBooksView.swift */,
 				A0021F922C5CD678003F5720 /* BooksContent.swift */,
 				A092D5272C606C4B0030D9E7 /* HistogramView.swift */,
+				A07BCA372C619DBA00AFCF02 /* TrendGraphView.swift */,
 				A092D5292C60DAA30030D9E7 /* ChartsSummaryView.swift */,
 			);
 			path = View;
@@ -181,6 +184,7 @@
 				A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */,
 				A00A0AC02C4BD9620020D708 /* ReadingNoteApp.swift in Sources */,
 				A00A0AD02C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld in Sources */,
+				A07BCA382C619DBA00AFCF02 /* TrendGraphView.swift in Sources */,
 				A00A0AD92C4E26460020D708 /* EditBooksView.swift in Sources */,
 				A092D52A2C60DAA30030D9E7 /* ChartsSummaryView.swift in Sources */,
 			);
