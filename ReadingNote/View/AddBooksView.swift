@@ -13,7 +13,7 @@ struct AddBooksView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
-    @State private var readTime: Double = 0
+    @State private var readTime: Double = 0.0
     
     var body: some View {
         
@@ -28,6 +28,16 @@ struct AddBooksView: View {
                     Spacer()
                 }
                 .padding()
+                
+                VStack (spacing: 10) {
+                    Spacer()
+                    HStack (alignment: .center) {
+                        Spacer()
+                        StopWatchView(minuteCount: $readTime)
+                        Spacer()
+                    }
+                    Spacer()
+                }
                 
                 HStack {
                     Spacer()

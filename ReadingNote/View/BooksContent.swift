@@ -61,5 +61,4 @@ struct BooksContent: View {
         
         return formattedReadDate != formattedCurrentDate ? .gray : .primary
     }
-    
 }
