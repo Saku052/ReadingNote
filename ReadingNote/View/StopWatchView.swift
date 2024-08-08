@@ -35,6 +35,9 @@ struct StopWatchView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)
+                    .onTapGesture {
+                        secondCount -= 60
+                    }
                 
                 Image(systemName: "play.circle.fill")
                     .resizable()
@@ -58,6 +61,9 @@ struct StopWatchView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)
+                    .onTapGesture {
+                        secondCount += 60
+                    }
             }
         }
     }

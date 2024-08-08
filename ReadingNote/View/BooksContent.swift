@@ -17,9 +17,11 @@ struct BooksContent: View {
         NavigationLink (destination: ChartsSummaryView(books: books)) {
             VStack (alignment: .leading) {
                 
-                Text("Check distribution")
-                Text("Average: 20 minutes")
+                Text("Check graph")
+                    .font(.headline)
                     .bold()
+                Text("Average: 20 minutes")
+                    .font(.title)
             }
         }
         
