@@ -20,7 +20,7 @@ struct BooksContent: View {
                 Text("Check graph")
                     .font(.headline)
                     .bold()
-                Text("Average: 20 minutes")
+                Text("Average: \(getAverageReading(books: books)) minutes")
                     .font(.title)
             }
         }
@@ -62,5 +62,18 @@ struct BooksContent: View {
         let formattedCurrentDate = Date().formatted(date: .numeric, time: .omitted)
         
         return formattedReadDate != formattedCurrentDate ? .gray : .primary
+    }
+    
+    func getAverageReading(books: FetchedResults<Book>) -> Int {
+        
+        var sum: Double = 0.0
+        var avg: Int = 0
+        
+        for book in books {
+            sum += book.readingTime
+        }
+        avg = Int (sum / Double(books.count))
+        
+        return avg
     }
 }
