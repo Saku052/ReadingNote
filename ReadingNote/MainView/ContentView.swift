@@ -20,9 +20,9 @@ struct ContentView: View {
     
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             
-            VStack(alignment: .leading) {
+            VStack {
                 Text("\(Int(totalReadingToday())) minutes of reading today")
                     .foregroundStyle(.gray)
                     .padding(.horizontal)
@@ -31,9 +31,8 @@ struct ContentView: View {
                     BooksContent(books: books)
                 }
                 .listStyle(.plain)
-                
             }
-            .navigationTitle("Books")
+            .navigationTitle("Read books")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -43,7 +42,11 @@ struct ContentView: View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                    }
                 }
             }
             .sheet(isPresented: $showingAddView) {
