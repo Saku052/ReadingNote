@@ -26,7 +26,7 @@ struct BooksContent: View {
         }
         
         // List of past 8 books read
-        ForEach(books.prefix(8)) { book in
+        ForEach (books.prefix(8)) { book in
             NavigationLink(destination: EditBooksView(book: book)) {
                 HStack {
                     VStack (alignment: .leading, spacing: 6) {

@@ -21,19 +21,24 @@ struct ContentView: View {
     
     var body: some View {
         
-        NavigationStack {
-            
-            VStack {
-                Text("\(Int(totalReadingToday())) minutes of reading today")
-                    .foregroundStyle(.gray)
-                    .padding(.horizontal)
-                
-                List {
-                    BooksContent(books: books)
+        NavigationView {
+            ZStack {
+                VStack {
+                    
+                    Text("\(Int(totalReadingToday())) minutes of reading today")
+                        .foregroundStyle(.gray)
+                        .padding(.horizontal)
+                    
+                    List {
+                        BooksContent(books: books)
+                    }
+                    .listStyle(.plain)
                 }
-                .listStyle(.plain)
+                .sheet(isPresented: $showingAddView) { AddBooksView() }
+                
+                SideMenuView(books: books, showingMenuView: $showingMenuView)
             }
-            .navigationTitle("Read books")
+            .toolbar(showingMenuView ? .hidden : .visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button { showingAddView.toggle() }
@@ -44,10 +49,7 @@ struct ContentView: View {
                     label: { Image(systemName: "line.3.horizontal") }
                 }
             }
-            .sheet(isPresented: $showingAddView) {
-                AddBooksView()
-            }
-            
+            .navigationTitle("Read books")
         }
         .navigationViewStyle(.stack)
     }
@@ -62,8 +64,4 @@ struct ContentView: View {
         return readingToday
     }
     
-}
-
-#Preview {
-    ContentView()
 }

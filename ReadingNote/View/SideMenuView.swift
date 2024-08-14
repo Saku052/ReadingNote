@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SideMenuView: View {
+    var books: FetchedResults<Book>
     @Binding var showingMenuView: Bool
     
     var body: some View {
@@ -24,19 +25,33 @@ struct SideMenuView: View {
                 HStack {
                     VStack {
                         Text("This is header")
+                        
+                        ForEach (listOfBooks(), id: \.self) { book in
+                            SideMenuRowView(bookName: book)
+                        }
+                        
                         Spacer()
                     }
                     .padding()
                     .frame(width: 270, alignment: .leading)
                     .background(.white)
-                    
                     Spacer()
                 }
             }
         }
+        .transition(.move(edge: .leading))
+        .animation(.easeInOut, value: showingMenuView)
     }
-}
-
-#Preview {
-    SideMenuView(showingMenuView: .constant(true))
+    
+    func listOfBooks() -> [String] {
+        
+        var booklist: [String] = []
+        for book in books {
+            if (!booklist.contains(book.name!)) {
+                booklist.append(book.name!)
+            }
+        }
+        
+        return booklist
+    }
 }

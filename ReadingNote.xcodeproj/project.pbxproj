@@ -21,6 +21,7 @@
 		A092D5282C606C4B0030D9E7 /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092D5272C606C4B0030D9E7 /* HistogramView.swift */; };
 		A092D52A2C60DAA30030D9E7 /* ChartsSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092D5292C60DAA30030D9E7 /* ChartsSummaryView.swift */; };
 		A0EB1E0A2C6C3B8700CDED6A /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB1E092C6C3B8700CDED6A /* SideMenuView.swift */; };
+		A0EB1E0C2C6CA36100CDED6A /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB1E0B2C6CA36100CDED6A /* SideMenuRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		A092D5272C606C4B0030D9E7 /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
 		A092D5292C60DAA30030D9E7 /* ChartsSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsSummaryView.swift; sourceTree = "<group>"; };
 		A0EB1E092C6C3B8700CDED6A /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		A0EB1E0B2C6CA36100CDED6A /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				A07BCA372C619DBA00AFCF02 /* TrendGraphView.swift */,
 				A07BCA3A2C61BAE100AFCF02 /* StopWatchView.swift */,
 				A0EB1E092C6C3B8700CDED6A /* SideMenuView.swift */,
+				A0EB1E0B2C6CA36100CDED6A /* SideMenuRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				A00A0AC22C4BD9620020D708 /* ContentView.swift in Sources */,
 				A07BCA3B2C61BAE100AFCF02 /* StopWatchView.swift in Sources */,
 				A0021F932C5CD678003F5720 /* BooksContent.swift in Sources */,
+				A0EB1E0C2C6CA36100CDED6A /* SideMenuRowView.swift in Sources */,
 				A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */,
 				A092D5282C606C4B0030D9E7 /* HistogramView.swift in Sources */,
 				A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */,
