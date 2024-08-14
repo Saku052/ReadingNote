@@ -20,6 +20,7 @@
 		A07BCA3B2C61BAE100AFCF02 /* StopWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07BCA3A2C61BAE100AFCF02 /* StopWatchView.swift */; };
 		A092D5282C606C4B0030D9E7 /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092D5272C606C4B0030D9E7 /* HistogramView.swift */; };
 		A092D52A2C60DAA30030D9E7 /* ChartsSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092D5292C60DAA30030D9E7 /* ChartsSummaryView.swift */; };
+		A0EB1E0A2C6C3B8700CDED6A /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB1E092C6C3B8700CDED6A /* SideMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A07BCA3A2C61BAE100AFCF02 /* StopWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchView.swift; sourceTree = "<group>"; };
 		A092D5272C606C4B0030D9E7 /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
 		A092D5292C60DAA30030D9E7 /* ChartsSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsSummaryView.swift; sourceTree = "<group>"; };
+		A0EB1E092C6C3B8700CDED6A /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				A092D5272C606C4B0030D9E7 /* HistogramView.swift */,
 				A07BCA372C619DBA00AFCF02 /* TrendGraphView.swift */,
 				A07BCA3A2C61BAE100AFCF02 /* StopWatchView.swift */,
+				A0EB1E092C6C3B8700CDED6A /* SideMenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */,
 				A092D5282C606C4B0030D9E7 /* HistogramView.swift in Sources */,
 				A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */,
+				A0EB1E0A2C6C3B8700CDED6A /* SideMenuView.swift in Sources */,
 				A00A0AC02C4BD9620020D708 /* ReadingNoteApp.swift in Sources */,
 				A00A0AD02C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld in Sources */,
 				A07BCA382C619DBA00AFCF02 /* TrendGraphView.swift in Sources */,

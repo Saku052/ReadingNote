@@ -16,6 +16,7 @@ struct ContentView: View {
     var books: FetchedResults<Book>
     
     @State private var showingAddView = false
+    @State private var showingMenuView = false
     
     
     var body: some View {
@@ -35,18 +36,12 @@ struct ContentView: View {
             .navigationTitle("Read books")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showingAddView.toggle()
-                    } label: {
-                        Label("Book", systemImage: "plus.circle")
-                    }
+                    Button { showingAddView.toggle() }
+                    label: { Label("Book", systemImage: "plus.circle") }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "line.3.horizontal")
-                    }
+                    Button { showingMenuView.toggle() }
+                    label: { Image(systemName: "line.3.horizontal") }
                 }
             }
             .sheet(isPresented: $showingAddView) {
