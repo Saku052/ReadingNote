@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChartsSummaryView: View {
     
-    let books: FetchedResults<Book>
+    let books: [Book]
     
     var body: some View {
         

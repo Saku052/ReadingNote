@@ -10,6 +10,7 @@ import SwiftUI
 struct SideMenuView: View {
     var books: FetchedResults<Book>
     @Binding var showingMenuView: Bool
+    @Binding var whichBook: String
     
     var body: some View {
         ZStack {
@@ -28,6 +29,9 @@ struct SideMenuView: View {
                         
                         ForEach (listOfBooks(), id: \.self) { book in
                             SideMenuRowView(bookName: book)
+                                .onTapGesture { 
+                                    whichBook = book
+                                    showingMenuView.toggle() }
                         }
                         
                         Spacer()
@@ -45,7 +49,7 @@ struct SideMenuView: View {
     
     func listOfBooks() -> [String] {
         
-        var booklist: [String] = []
+        var booklist: [String] = ["All"]
         for book in books {
             if (!booklist.contains(book.name!)) {
                 booklist.append(book.name!)

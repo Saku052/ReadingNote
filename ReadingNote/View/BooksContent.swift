@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BooksContent: View {
     
-    let books: FetchedResults<Book>
+    let books: [Book]
     @Environment(\.managedObjectContext) var managedObjContext
     
     var body: some View {
@@ -64,7 +64,7 @@ struct BooksContent: View {
         return formattedReadDate != formattedCurrentDate ? .gray : .primary
     }
     
-    func getAverageReading(books: FetchedResults<Book>) -> Int {
+    func getAverageReading(books: [Book]) -> Int {
         
         var sum: Double = 0.0
         var avg: Int = 0

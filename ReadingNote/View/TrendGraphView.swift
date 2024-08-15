@@ -10,7 +10,7 @@ import Charts
 
 struct TrendGraphView: View {
     
-    let books: FetchedResults<Book>
+    let books: [Book]
     
     var body: some View {
         

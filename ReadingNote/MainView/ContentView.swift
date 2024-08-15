@@ -17,6 +17,7 @@ struct ContentView: View {
     
     @State private var showingAddView = false
     @State private var showingMenuView = false
+    @State public var whichBook: String = "All"
     
     
     var body: some View {
@@ -28,15 +29,15 @@ struct ContentView: View {
                     Text("\(Int(totalReadingToday())) minutes of reading today")
                         .foregroundStyle(.gray)
                         .padding(.horizontal)
-                    
+                    Text(whichBook)
                     List {
-                        BooksContent(books: books)
+                        BooksContent(books: checkWhichBook())
                     }
                     .listStyle(.plain)
                 }
                 .sheet(isPresented: $showingAddView) { AddBooksView() }
                 
-                SideMenuView(books: books, showingMenuView: $showingMenuView)
+                SideMenuView(books: books, showingMenuView: $showingMenuView, whichBook: $whichBook)
             }
             .toolbar(showingMenuView ? .hidden : .visible, for: .navigationBar)
             .toolbar {
@@ -62,6 +63,20 @@ struct ContentView: View {
             }
         }
         return readingToday
+    }
+    
+    func checkWhichBook() -> [Book] {
+        var resultBooks: [Book] = []
+        
+        for book in books {
+            if (book.name == whichBook) {
+                resultBooks.append(book)
+            } else if (whichBook == "All") {
+                resultBooks.append(book)
+            }
+        }
+        
+        return resultBooks
     }
     
 }
