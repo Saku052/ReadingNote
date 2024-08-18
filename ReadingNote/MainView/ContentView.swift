@@ -19,21 +19,25 @@ struct ContentView: View {
     @State private var showingMenuView = false
     @State public var whichBook: String = "All"
     
-    
     var body: some View {
         
         NavigationView {
             ZStack {
                 VStack {
-                    
                     Text("\(Int(totalReadingToday())) minutes of reading today")
                         .foregroundStyle(.gray)
                         .padding(.horizontal)
-                    Text(whichBook)
-                    List {
-                        BooksContent(books: checkWhichBook())
+                    
+                    if (whichBook == "All") {
+                        // When app is opened
+                        PieChartView(books: checkWhichBook())
+                    } else {
+                        // When Book title is selected in side menu
+                        List {
+                            BooksContent(books: checkWhichBook())
+                        }
+                        .listStyle(.plain)
                     }
-                    .listStyle(.plain)
                 }
                 .sheet(isPresented: $showingAddView) { AddBooksView() }
                 

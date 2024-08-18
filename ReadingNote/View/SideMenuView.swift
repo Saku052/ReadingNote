@@ -25,7 +25,7 @@ struct SideMenuView: View {
                 // White side menu part
                 HStack {
                     VStack {
-                        Text("This is header")
+                        Text("List of read book")
                         
                         ForEach (listOfBooks(), id: \.self) { book in
                             SideMenuRowView(bookName: book)

@@ -13,7 +13,6 @@ struct HistogramView: View {
     let books: [Book]
     
     var body: some View {
-        
         let dataset = books.map { $0.readingTime }
 
         Chart {

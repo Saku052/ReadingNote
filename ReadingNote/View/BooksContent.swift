@@ -41,7 +41,6 @@ struct BooksContent: View {
                 }
             }
             
-            
         }
         .onDelete(perform: deleteBooks)
     }
