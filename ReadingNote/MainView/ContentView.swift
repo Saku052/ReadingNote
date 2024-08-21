@@ -24,13 +24,16 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    Text("\(Int(totalReadingToday())) minutes of reading today")
-                        .foregroundStyle(.gray)
-                        .padding(.horizontal)
                     
                     if (whichBook == "All") {
                         // When app is opened
-                        PieChartView(books: checkWhichBook())
+                        HistogramView(books: checkWhichBook())
+                        HStack {
+                            Text("\(Int(totalReadingToday())) minutes of reading today")
+                                .foregroundStyle(.gray)
+                                .padding(.horizontal)
+                            PieChartView(books: checkWhichBook())
+                        }
                     } else {
                         // When Book title is selected in side menu
                         List {
@@ -55,14 +58,16 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Read books")
+            .background(Color(red: 0.25, green: 0.21, blue: 0.26));
         }
         .navigationViewStyle(.stack)
+
     }
     
     func totalReadingToday() -> Double {
         var readingToday: Double = 0
         for item in books {
-            if Calendar.current.isDateInToday(item.readDate!) {
+            if Calendar.current.isDate(item.readDate!, equalTo: Date(), toGranularity: .weekOfYear){
                 readingToday += item.readingTime
             }
         }
