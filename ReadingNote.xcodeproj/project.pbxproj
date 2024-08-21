@@ -16,6 +16,8 @@
 		A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD22C4BDD810020D708 /* DataController.swift */; };
 		A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */; };
 		A00A0AD92C4E26460020D708 /* EditBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD82C4E26460020D708 /* EditBooksView.swift */; };
+		A05306652C757FF300FE1A17 /* WeekVisualizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05306642C757FF300FE1A17 /* WeekVisualizeView.swift */; };
+		A05306682C7595DF00FE1A17 /* DayCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05306672C7595DF00FE1A17 /* DayCircle.swift */; };
 		A07BCA382C619DBA00AFCF02 /* TrendGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07BCA372C619DBA00AFCF02 /* TrendGraphView.swift */; };
 		A07BCA3B2C61BAE100AFCF02 /* StopWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07BCA3A2C61BAE100AFCF02 /* StopWatchView.swift */; };
 		A092D5282C606C4B0030D9E7 /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092D5272C606C4B0030D9E7 /* HistogramView.swift */; };
@@ -36,6 +38,8 @@
 		A00A0AD22C4BDD810020D708 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBooksView.swift; sourceTree = "<group>"; };
 		A00A0AD82C4E26460020D708 /* EditBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBooksView.swift; sourceTree = "<group>"; };
+		A05306642C757FF300FE1A17 /* WeekVisualizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekVisualizeView.swift; sourceTree = "<group>"; };
+		A05306672C7595DF00FE1A17 /* DayCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCircle.swift; sourceTree = "<group>"; };
 		A07BCA372C619DBA00AFCF02 /* TrendGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendGraphView.swift; sourceTree = "<group>"; };
 		A07BCA3A2C61BAE100AFCF02 /* StopWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchView.swift; sourceTree = "<group>"; };
 		A092D5272C606C4B0030D9E7 /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
@@ -97,7 +101,9 @@
 		A00A0ACD2C4BD97D0020D708 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A05306662C7595C900FE1A17 /* Conponents */,
 				A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */,
+				A05306642C757FF300FE1A17 /* WeekVisualizeView.swift */,
 				A0021F922C5CD678003F5720 /* BooksContent.swift */,
 				A07BCA3A2C61BAE100AFCF02 /* StopWatchView.swift */,
 				A0EB1E092C6C3B8700CDED6A /* SideMenuView.swift */,
@@ -113,6 +119,14 @@
 				A00A0AD22C4BDD810020D708 /* DataController.swift */,
 			);
 			path = DataGroup;
+			sourceTree = "<group>";
+		};
+		A05306662C7595C900FE1A17 /* Conponents */ = {
+			isa = PBXGroup;
+			children = (
+				A05306672C7595DF00FE1A17 /* DayCircle.swift */,
+			);
+			path = Conponents;
 			sourceTree = "<group>";
 		};
 		A07BCA392C61BA1600AFCF02 /* MainView */ = {
@@ -215,8 +229,10 @@
 				A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */,
 				A0EB1E0A2C6C3B8700CDED6A /* SideMenuView.swift in Sources */,
 				A00A0AC02C4BD9620020D708 /* ReadingNoteApp.swift in Sources */,
+				A05306682C7595DF00FE1A17 /* DayCircle.swift in Sources */,
 				A00A0AD02C4BDB1C0020D708 /* ReadingTimeDb.xcdatamodeld in Sources */,
 				A07BCA382C619DBA00AFCF02 /* TrendGraphView.swift in Sources */,
+				A05306652C757FF300FE1A17 /* WeekVisualizeView.swift in Sources */,
 				A00A0AD92C4E26460020D708 /* EditBooksView.swift in Sources */,
 				A092D52A2C60DAA30030D9E7 /* ChartsSummaryView.swift in Sources */,
 			);
