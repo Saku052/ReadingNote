@@ -36,14 +36,7 @@ struct ContentView: View {
                                 .foregroundStyle(Color(red: 0.93, green: 0.93, blue: 0.93))
                             HistogramView(books: checkWhichBook())
                                 .padding(30.0)
-                            Circle()
-                                .foregroundStyle(Color(red: 0.29, green: 0.94, blue: 0.76))
-                                .frame(width: 75, height: 75)
-                                .overlay(
-                                Circle()
-                                    .inset(by: 5.0)
-                                    .stroke(Color(red: 0.93, green: 0.93, blue: 0.93), lineWidth: 5.0)
-                                )
+                            StreakCircleView()
                                 .offset(y: 50)
                         }
                         .padding(20.0)
@@ -58,8 +51,7 @@ struct ContentView: View {
                         }
                         .padding(.vertical, 20)
                         .padding(20)
-                        
-                        
+                    
                     } else {
                         // When Book title is selected in side menu
                         List {
@@ -74,13 +66,18 @@ struct ContentView: View {
             }
             .toolbar(showingMenuView ? .hidden : .visible, for: .navigationBar)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button { showingAddView.toggle() }
-                    label: { Label("Book", systemImage: "plus.circle") }
-                }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button { showingMenuView.toggle() }
-                    label: { Image(systemName: "line.3.horizontal") }
+                ToolbarItem(placement: .bottomBar) {
+                    HStack (alignment: .center) {
+                        Spacer()
+                        Button { showingMenuView.toggle() }
+                        label: { Image(systemName: "line.3.horizontal") }
+                        Spacer()
+                        Spacer()
+                        Button { showingAddView.toggle() }
+                        label: { Label("Book", systemImage: "plus.circle") }
+                        Spacer()
+                    }
+                    .foregroundStyle(Color.white)
                 }
             }
             .background(Color(red: 0.25, green: 0.21, blue: 0.26));

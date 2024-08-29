@@ -16,6 +16,7 @@
 		A00A0AD32C4BDD810020D708 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD22C4BDD810020D708 /* DataController.swift */; };
 		A00A0AD52C4CD7C90020D708 /* AddBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */; };
 		A00A0AD92C4E26460020D708 /* EditBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A0AD82C4E26460020D708 /* EditBooksView.swift */; };
+		A02DDE792C804A1500740C64 /* StreakCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02DDE782C804A1500740C64 /* StreakCircleView.swift */; };
 		A05306652C757FF300FE1A17 /* WeekVisualizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05306642C757FF300FE1A17 /* WeekVisualizeView.swift */; };
 		A05306682C7595DF00FE1A17 /* DayCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05306672C7595DF00FE1A17 /* DayCircle.swift */; };
 		A07BCA382C619DBA00AFCF02 /* TrendGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07BCA372C619DBA00AFCF02 /* TrendGraphView.swift */; };
@@ -38,6 +39,7 @@
 		A00A0AD22C4BDD810020D708 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A00A0AD42C4CD7C90020D708 /* AddBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBooksView.swift; sourceTree = "<group>"; };
 		A00A0AD82C4E26460020D708 /* EditBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBooksView.swift; sourceTree = "<group>"; };
+		A02DDE782C804A1500740C64 /* StreakCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCircleView.swift; sourceTree = "<group>"; };
 		A05306642C757FF300FE1A17 /* WeekVisualizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekVisualizeView.swift; sourceTree = "<group>"; };
 		A05306672C7595DF00FE1A17 /* DayCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCircle.swift; sourceTree = "<group>"; };
 		A07BCA372C619DBA00AFCF02 /* TrendGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendGraphView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				A05306672C7595DF00FE1A17 /* DayCircle.swift */,
+				A02DDE782C804A1500740C64 /* StreakCircleView.swift */,
 			);
 			path = Conponents;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A02DDE792C804A1500740C64 /* StreakCircleView.swift in Sources */,
 				A0FF1A5E2C71E0D6003A0F49 /* PieChartView.swift in Sources */,
 				A00A0AC22C4BD9620020D708 /* ContentView.swift in Sources */,
 				A07BCA3B2C61BAE100AFCF02 /* StopWatchView.swift in Sources */,
