@@ -19,6 +19,7 @@ struct HistogramView: View {
             ForEach (getfrequency(data: dataset)) { data in
                 BarMark(x: .value("reading time", String(data.split) + "~"),
                         y: .value("frequency", data.freq))
+                .foregroundStyle(Color(red: 0.25, green: 0.21, blue: 0.26))
             }
         }
     }

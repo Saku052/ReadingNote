@@ -24,16 +24,42 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    
                     if (whichBook == "All") {
-                        // When app is opened
-                        HistogramView(books: checkWhichBook())
-                        HStack {
-                            Text("\(Int(totalReadingToday())) minutes of reading today")
-                                .foregroundStyle(.gray)
-                                .padding(.horizontal)
-                            PieChartView(books: checkWhichBook())
+                        
+                        // Top Bar showing day of the week
+                        WeekVisualizeView()
+                        
+                        // middle histogram box
+                        ZStack (alignment: .bottom) {
+                            Rectangle()
+                                .cornerRadius(10.0)
+                                .foregroundStyle(Color(red: 0.93, green: 0.93, blue: 0.93))
+                            HistogramView(books: checkWhichBook())
+                                .padding(30.0)
+                            Circle()
+                                .foregroundStyle(Color(red: 0.29, green: 0.94, blue: 0.76))
+                                .frame(width: 75, height: 75)
+                                .overlay(
+                                Circle()
+                                    .inset(by: 5.0)
+                                    .stroke(Color(red: 0.93, green: 0.93, blue: 0.93), lineWidth: 5.0)
+                                )
+                                .offset(y: 50)
                         }
+                        .padding(20.0)
+                        
+                        // bottom What you learned box
+                        ZStack (alignment: .center) {
+                            Rectangle()
+                                .cornerRadius(10.0)
+                                .foregroundStyle(Color(red: 0.93, green: 0.93, blue: 0.93))
+                            Text("This is what I have learned This day")
+                                .foregroundStyle(Color.black)
+                        }
+                        .padding(.vertical, 20)
+                        .padding(20)
+                        
+                        
                     } else {
                         // When Book title is selected in side menu
                         List {
@@ -57,7 +83,6 @@ struct ContentView: View {
                     label: { Image(systemName: "line.3.horizontal") }
                 }
             }
-            .navigationTitle("Read books")
             .background(Color(red: 0.25, green: 0.21, blue: 0.26));
         }
         .navigationViewStyle(.stack)
